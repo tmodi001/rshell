@@ -24,9 +24,14 @@ void  execute(char *argv[temp]) {
   }
 }
 
-int main(int argc, char* argv[]){
-  int temp = 1;
-  while (argv[temp] != "exit"){
-    execute(argv[temp]);
-  }
+int main(){
+string temp;
+while (temp != "exit"){
+ cout << "$ ";
+ getline(cin, command);
+ unsigned place = 0;
+ 
+ do_work(command, place);
+ 
+ }
 }
