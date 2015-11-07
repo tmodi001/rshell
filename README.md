@@ -1,3 +1,8 @@
+name1 = Tirth Modi
+ucrnetid1 = tmodi001
+name2 = Michael Pena
+ucrnetid2 = mpena011
+
 -----------------------------
 Command Shell - An Overview
 -----------------------------
