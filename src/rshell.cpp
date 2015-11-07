@@ -90,6 +90,11 @@ void separate(vector<char *> words) {
         }
       }
       
+      //Helds the comments
+      if (words.at(i)[j] == '#'){
+        words.at(i)[j] = '\0';
+      }
+      
       //Checking for &&
       if (words.at(i)[j] == '&' && words.at(i)[j+1] == '&') {
         if (!ororFirst) {
