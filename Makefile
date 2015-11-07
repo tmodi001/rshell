@@ -6,4 +6,4 @@ all:
 	$(MOVE) $(COMPILE) $(FLAGS) main.cc -o rshell
 	
 rshell:
-	cd src; ./rshell
+	$(MOVE) ./rshell
