@@ -3,7 +3,7 @@ COMPILE = g++
 FLAGS = -Wall -Werror -ansi -pedantic
 
 all:
-	$(MOVE) $(COMPILE) $(FLAGS) rshell.cpp -o rshell
+	$(MOVE) $(COMPILE) $(FLAGS) almost.cpp -o rshell
 	
 rshell:
-	$(MOVE) ./rshell
+	$(MOVIE) ./rshell
