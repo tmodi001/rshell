@@ -94,7 +94,7 @@ bool test_command(const char* t) {
   bool word = false;
   bool start = false;
   bool end = false;
-  bool flag = false;
+  //bool flag = false;
   bool eflag = true;
   bool fflag = false;
   bool dflag = false;
@@ -164,7 +164,7 @@ bool test_command(const char* t) {
   int t2c = 0;
   
   //removes spaces
-  for (j1; test[j1] == ' '; j1++) {}
+  for (; test[j1] == ' '; j1++) {}
   
   //Checks for flags
   if (test[j1] == '-') {
@@ -172,19 +172,19 @@ bool test_command(const char* t) {
     if (test[j1 + 1] == 'd' && test[j1 + 2] == ' ') {
       dflag = true;
       eflag = false;
-      flag = true;
+      //flag = true;
       j1 = j1 + 2;
     }
     //checks for f flag
     else if (test[j1 + 1] == 'f' && test[j1 + 2] == ' ') {
       fflag = true;
-      flag = true;
+      //flag = true;
       eflag = false;
       j1 = j1 + 2;
     }
     //checks for e flag
     else if (test[j1 + 1] == 'e' && test[j1 + 2] == ' ') {
-      flag = true;
+      //flag = true;
       j1 = j1 + 2;
     }
     // prints the valid flags if flag was not inputted properly
@@ -199,16 +199,16 @@ bool test_command(const char* t) {
   }
   
   //makes sure the back of test was entered properly
-  for (j1; test[j1] == ' '; j1++) {}
+  for (; test[j1] == ' '; j1++) {}
   if (test[j1] != '\0') {
     
     //checks for null character or space
-    for (j1; test[j1] != '\0' && test[j1] != ' '; j1++) {
+    for (; test[j1] != '\0' && test[j1] != ' '; j1++) {
       t2[t2c] = test[j1];
       t2c++;
     }
     t2[t2c] = '\0';
-    for (j1; test[j1] == ' '; j1++) {}
+    for (; test[j1] == ' '; j1++) {}
     
     //checks for end bracket
     if (bracket) {
@@ -265,6 +265,7 @@ bool test_command(const char* t) {
         return false;
     }
   }
+  return false;
 }
 
 //Check will check the first and remove spaces and add it to second
@@ -615,6 +616,7 @@ bool separate(vector<char *> words) {
       if (pass != 0){return false;}
     }
   }
+  return false;
 }
 
 bool par_function(char *t) {
@@ -683,10 +685,10 @@ bool par_function(char *t) {
     bool doit = true;
     
     //checks for space in front
-    for (i; t[i] == ' '; i++) {}
+    for (; t[i] == ' '; i++) {}
     if (t[i] != '(') {
       int ic = 0;
-      for (i; t[i] != '('; i++, bi++) {
+      for (; t[i] != '('; i++, bi++) {
         b[bi] = t[i];
         if ((t[i] == '&' && t[i + 1] == '&') 
           || (t[i] == '|' && t[i + 1] == '|' )) {
