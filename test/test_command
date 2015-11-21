@@ -1,0 +1,89 @@
+Script started on Sat 21 Nov 2015 07:13:47 AM UTC
+mpena011@c_workspace:~/workspace/CS100/Assn2 (master) $ g++ -Wall -Werror -ansi -pedantic rshell.cpp
+mpena011@c_workspace:~/workspace/CS100/Assn2 (master) $ ./a.out
+$ [ test ] && echo A
+A
+$ [ asdf ] && echo A
+$ [ -f test ] && echo A
+$ [ -f rshell.cpp ] && echo A
+A
+$ test -d test && echo A
+A
+$ test -f test/test.cpp && echo A
+A
+$ test -f test/test2 && echo A
+$ test -d test/test2 && echo A
+A
+$ [sdfa ]
+Need a have after space '['
+$ [ fsadf]
+Need a have before space ']'
+$ [ / ]
+$ [ -e test ] && echo A
+A
+$ echo A && [ test ] || echo C
+A
+$ echo A && [ttest ] && echo C
+A
+C
+$     test    -f   test
+$ test	   -f	test && echo A
+$ test	     -d test && echo A
+A
+$ test	   -s tset
+Invalid flag!
+Use the following flags:
+-e checks if the file/directory exists
+-f checks if the file/directory existsand is a regular file
+-d checks if the file/directory exists and is a directory
+Error!
+$ test -f -t
+$ test -f -t && echo A
+$ test -f -t && echo A
+$ testt-ff-
+Invalid flag!
+Use the following flags:
+-e checks if the file/directory exists
+-f checks if the file/directory existsand is a regular file
+-d checks if the file/directory exists and is a directory
+$ testttest
+$ test test && echo A
+A
+$ test -f test || echo A
+A
+$ [ -f	   test       ]
+$ [  -f -d testest    ] && echo A
+A
+$ test -f test/test.cpp      && echo A
+A
+$ [-f test]] && echo A
+Need a have after space '['
+$ [ -d test ] && echo A
+A
+$ [ -d test ]&&echo A
+A
+$ test -d test&& echo A
+A
+$ test -d test&&echo A
+A
+$ test saf && echo A
+$ test -f fsaf && echo A
+$ test -d fsadf && echo A
+$ test -e fsadf && echo A
+$ [ saf ]&&echo A
+$ [ test ]&&echo A
+A
+$ [ -f		  test	    ] &&    echo A
+$ [   -d	  testet    ] &&    echo A
+A
+$ [   -d	      test }] || echo A
+$ [ -f	 test ] || echo A
+A
+$ [ /test/test2 ] && echo "pathhexists"
+$ [ test/test2 ] && echo "path exists"
+"path exists"
+$ exit
+mpena011@c_workspace:~/workspace/CS100/Assn2 (master) $ exit
+exit
+
+Script done on Sat 21 Nov 2015 07:29:11 AM UTC

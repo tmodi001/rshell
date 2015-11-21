@@ -1,0 +1,95 @@
+Script started on Sat 21 Nov 2015 07:32:17 AM UTC
+mpena011@c_workspace:~/workspace/CS100/Assn2 (master) $ g++t-Wall -Werror -ansi -pedantic rshell.cpp
+mpena011@c_workspace:~/workspace/CS100/Assn2 (master) $ ./a.out
+$ (echo A && echo B) && (echo C || echo D)
+A
+B
+C
+$ ((echo A || echo B) && echo C)
+A
+C
+$ (echo A && (echo B && echo C) && (echo D && echo F))
+A
+B
+C
+D
+F
+$ echo A && (echo B && echo C)
+A
+B
+C
+$ echo A || (echo B && echo C)
+A
+$ (echo A && echo B) && echo C
+A
+B
+C
+$ (echo A && echo B) || echo C
+A
+B
+$ (echo A || echo B) && (echo C || echo D)
+A
+C
+$ (echo A)
+A
+$ (echo A && echo B)
+A
+B
+$ (echo A || echo B)
+A
+$ echo A && (echo B || echo C) && echo D
+A
+B
+D
+$ echo A || (echo B && ec
+A
+$ echo A || (echo B && echo C) && echo D
+A
+D
+$ echo A && echo B || (echo C && echo D)
+A
+B
+$ echo A || echo B && (echo C && echo D)
+A
+C
+D
+$ echo A && (echo B)
+A
+B
+$ (echo A) && echo B
+A
+B
+$ ((echo A && echo B) || (echo C && echo D && (echo E && echo F)))
+A
+B
+$ echo A || echo B && (echo C && echo D)
+A
+C
+D
+$ echo A || (echo B && echo C) && echo D
+A
+D
+$ (echo A || echo B && echo C) && echo D
+A
+D
+$ echo "That should have been AnCaandaDd C
+"That should have been A C and D
+$ ((echo A || echo B || echo C || echo D))
+A
+$ ((echo A && echo B && echo C && echo D))
+A
+B
+C
+D
+$ ( (echo A && echo B && echo C && echo D) )
+A
+B
+C
+D
+$ ( (echo A || echo B || echo C || echo D) )
+A
+$ exit
+mpena011@c_workspace:~/workspace/CS100/Assn2 (master) $ exitoutll -Werror -ansi -pedantic rshell.cpp
+exit
+
+Script done on Sat 21 Nov 2015 07:36:41 AM UTC
