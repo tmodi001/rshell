@@ -2,8 +2,6 @@ name1 = Tirth Modi
 
 name2 = Michael Pena
 
-Tirth Modi
-Michael Pena
 -----------------------------
 Command Shell - An Overview
 -----------------------------
