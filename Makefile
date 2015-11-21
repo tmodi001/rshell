@@ -3,7 +3,11 @@ COMPILE = g++
 FLAGS = -Wall -Werror -ansi -pedantic
 
 all:
-	$(MOVE) $(COMPILE) $(FLAGS) almost.cpp -o rshell
+	rm -rf bin
+	mkdir -p bin
+	$(COMPILE) $(FLAGS) ./src/main.cpp -o ./bin/rshell
 	
 rshell:
-	$(MOVIE) ./rshell
+	rm -rf bin
+	mkdir -p bin
+	$(COMPILE) $(FLAGS) ./src/main.cpp -o ./bin/rshell
