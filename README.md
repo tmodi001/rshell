@@ -44,7 +44,7 @@ separate, and goes until our base case. Our base case is if there is just a
 single command with no operators, which simply get run. These branches also 
 help prepare the commands for the execute function, removing unnecessary spaces
 through our check function, and moving commands into their temporary strings. 
-In each of these branches, we also check if the user has a test or [] command 
+In each of these branches, we also check if the user has a test or [ ] command 
 to run, in which case we would break off into our test_command function, a 
 function designed to check and run any test commands. This will check for flags
 and ensure that that the commands are valid commands, using its helper function
@@ -77,9 +77,9 @@ used in quotes, the function will falsely assume that the user is attempting
 to run a test command. Again, a revamp to our separate function could solve 
 this issue.
 
-Other than quotes, we also have problems with long strimgs of commands and 
-operators failing to execute the proper commands when the || operator is used. 
-An example of this is echo A || echo B || echo C || echo D, which should only 
-print an A, however prints out other letters as well. The problem is once 
+Other than quotes, we also have problems with long strings of commands and 
+operators failing to execute the proper commands when the && operator is followed 
+by the || operator. An example of this is echo A || echo B && echo C, which should 
+print A and then C, however  it prints out only A. The problem is once 
 again somewhere in our separate function, and could also be resolved through 
-a revamp of the function. 
+a revamp of the function.
