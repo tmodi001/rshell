@@ -9,7 +9,7 @@ This program takes in user input to run bash commands such as ls and echo.
 Standard syntax for these commands are allowed, including spaces, operators, 
 and arguments. 
 
-This has been expanded on to include test, including the [] operators, and to 
+This has been expanded on to include test, including the [ ] operators, and to 
 allow for precedence operators (). Comments have also been revised and are 
 working fully.
 
